@@ -32,3 +32,12 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+#image
+*.jpg  
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+
