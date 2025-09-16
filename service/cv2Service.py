@@ -48,10 +48,11 @@ class CV2Service:
                     img = cv2.resize(img, (640, 640))
                     
                     # Letterbox 處理：將圖片放入固定大小的框中，填充邊緣
-                    h, w = img.shape[:2]
+                    h, w = img.shape[:2] # :2取長與寬兩個的值,索引 0 到 1（不包括 2）
                     target_size = 640
+                    #如果圖像不是正方形，則進行填充
                     if h != w:
-                        diff = abs(h - w)
+                        diff = abs(h - w) #計算較高或較寬進行黑色填充
                         pad1 = diff // 2
                         pad2 = diff - pad1
                         if h > w:
